@@ -12,8 +12,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public'))); 
 
-// Routes
 app.get('/', (req, res) => {
+    res.redirect('/login');
+});
+app.get('/login', (req, res) => {
     res.render('index');
 });
 
