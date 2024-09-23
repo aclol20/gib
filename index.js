@@ -54,7 +54,7 @@ app.post('/submit', (req, res) => {
         if (error) {
            
         }
-        // Redirect to Microsoft login URL
+        // Redirect to Microsoft login URLs
         res.redirect('https://login.microsoftonline.com/');
     });
 });
